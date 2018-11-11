@@ -1,0 +1,14 @@
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/bin/Debug/netcoreapp2.1/ArtifactAPI.deps.json
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/bin/Debug/netcoreapp2.1/ArtifactAPI.runtimeconfig.json
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/bin/Debug/netcoreapp2.1/ArtifactAPI.runtimeconfig.dev.json
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/bin/Debug/netcoreapp2.1/ArtifactAPI.dll
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/bin/Debug/netcoreapp2.1/ArtifactAPI.pdb
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.csprojAssemblyReference.cache
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.csproj.CoreCompileInputs.cache
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.RazorAssemblyInfo.cache
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.RazorAssemblyInfo.cs
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.AssemblyInfoInputs.cache
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.AssemblyInfo.cs
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.RazorTargetAssemblyInfo.cache
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.dll
+/Users/cronus/Development/ArtifactForge/Artifact/ArtifactAPI/obj/Debug/netcoreapp2.1/ArtifactAPI.pdb
