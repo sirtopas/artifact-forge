@@ -1,5 +1,18 @@
-<div *ngIf="cardSet">
-    <div *ngFor="let card of cardSet.card_set.card_list">
-        {{card.card_name.english}}
+<div class="ui container">
+    <h1>Theming Examples</h1>
+
+    <h2 class="ui dividing header">Site</h2>
+
+    <div *ngIf="cardSet">
+        <div class="ui cards">
+            <div *ngFor="let card of cardSet.card_set.card_list">
+                <div class="card">
+
+                    <div class="image">
+                        <img [src]=card.large_image.default>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
