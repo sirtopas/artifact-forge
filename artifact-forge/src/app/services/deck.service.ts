@@ -4,8 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { Cdn } from '../model/cdn';
-import { Card } from '../model/card';
-import { CardSet } from '../model/card-set';
+import { CardCollection } from '../model/card-collection';
 
 @Injectable()
 export class DeckService {
@@ -15,7 +14,7 @@ export class DeckService {
         return this.http.get<Cdn>(environment.apiUrl + 'cardset/GetCardsetInformation?deckType=01');
     }
 
-    getAllCards(cdn: Cdn): Observable<CardSet> {
-        return this.http.post<CardSet>(environment.apiUrl + 'cardset/GetDeckFromCdn', cdn);
+    getAllCards(cdn: Cdn): Observable<CardCollection> {
+        return this.http.post<CardCollection>(environment.apiUrl + 'cardset/GetDeckFromCdn', cdn);
     }
 }

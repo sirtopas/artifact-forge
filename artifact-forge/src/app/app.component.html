@@ -3,13 +3,13 @@
 
     <h2 class="ui dividing header">Site</h2>
 
-    <div *ngIf="cardSet">
+    <div *ngIf="cardCollection">
         <div class="ui cards">
-            <div *ngFor="let card of cardSet.card_set.card_list">
+            <div *ngFor="let card of cardCollection.card_set.card_list">
                 <div class="card">
 
                     <div class="image">
-                        <img [src]=card.large_image.default>
+                        <img [src]=card.mini_image.default>
                     </div>
                 </div>
             </div>

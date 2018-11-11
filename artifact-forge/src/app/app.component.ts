@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeckService } from './services/deck.service';
 import { Cdn } from './model/cdn';
-import { Card } from './model/card';
-import { CardSet } from './model/card-set';
+import { CardCollection } from './model/card-collection';
 
 @Component({
     selector: 'app-root',
@@ -11,16 +10,15 @@ import { CardSet } from './model/card-set';
 export class AppComponent implements OnInit {
 
     cdn: Cdn;
-    cardSet: CardSet;
+    cardCollection: CardCollection;
 
     constructor(private deckService: DeckService) { }
 
     ngOnInit() {
         this.deckService.getCardsetInformation().subscribe(cdn => {
             this.cdn = cdn;
-            this.deckService.getAllCards(this.cdn).subscribe(cardSet => {
-                this.cardSet = cardSet;
-                console.log(this.cardSet)
+            this.deckService.getAllCards(this.cdn).subscribe(cardCollection => {
+                this.cardCollection = cardCollection;
             });
         });
     }
