@@ -1,29 +1,49 @@
-<div class="ui container">
-    <h1>Cards</h1>
-    <div *ngIf="cardCollection">
-        <div class="ui three column grid">
-            <div *ngFor="let card of heroList">
-                <div class="column">
-                    <div class="ui card">
-                        <div class="image">
-                            <img class="ui small image" [src]=card.large_image.default>
+<!-- <div class="ui container"> -->
+<h1>Cards</h1>
+<div *ngIf="cardCollection">
+    <div class="ui column grid">
+        <div *ngFor="let card of heroList">
+            <ng-template #temp>
+                <div class="ui card">
+                    <div class="content">
+                        <a class="header">{{card.card_name.english}}</a>
+                        <div class="meta">
+                            <span class="date">Artist: {{card.illustrator}}</span>
                         </div>
-                        <div class="content">
-                            <div class="header">{{card.card_name.english}}</div>
-                            <div class="meta">{{card.card_type}}</div>
-                            <div class="description" [innerHTML]="card.card_text.english"></div>
+                        <div class="description">
+                            References:
+                            <div *ngFor="let reference of card.references">
+                                {{getReferenceNames(reference.card_id).card_name.english}}
+                            </div>
                         </div>
-                        <div class="extra content">
-                            <span class="right floated">
-                                HP: {{card.hit_points}}
-                            </span>
-                            <span>
-                                A: {{card.attack}}
-                            </span>
-                        </div>
+                    </div>
+                    <div class="extra content">
+                        {{card.rarity}}
+                    </div>
+                </div>
+            </ng-template>
+
+            <div class="column">
+                <div class="ui card" [tooltip]="temp" containerClass="hover-info">
+                    <div class="image">
+                        <img class="ui small image" [src]=card.large_image.default>
+                    </div>
+                    <div class="content">
+                        <div class="header">{{card.card_name.english}}</div>
+                        <div class="meta">{{card.card_type}}</div>
+                        <div class="description" [innerHTML]="card.card_text.english"></div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            HP: {{card.hit_points}}
+                        </span>
+                        <span>
+                            A: {{card.attack}}
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- </div> -->

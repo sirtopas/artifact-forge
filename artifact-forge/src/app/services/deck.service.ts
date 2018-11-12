@@ -10,11 +10,11 @@ import { CardCollection } from '../model/card-collection';
 export class DeckService {
     constructor(private http: HttpClient) { }
 
-    getCardsetInformation(): Observable<Cdn> {
-        return this.http.get<Cdn>(environment.apiUrl + 'cardset/GetCardsetInformation?deckType=01');
+    getCardsetInformation(set: string): Observable<Cdn> {
+        return this.http.get<Cdn>(environment.apiUrl + 'cardset/GetCardsetInformation?deckType=' + set);
     }
 
-    getAllCards(cdn: Cdn): Observable<CardCollection> {
+    getAllCards(cdn: Cdn): Observable<any> {
         return this.http.post<CardCollection>(environment.apiUrl + 'cardset/GetDeckFromCdn', cdn);
     }
 }

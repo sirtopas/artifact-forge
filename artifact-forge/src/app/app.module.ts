@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DeckService } from './services/deck.service';
 
+import { TooltipModule } from 'ngx-bootstrap';
+
 @NgModule({
     declarations: [
         AppComponent
@@ -13,7 +15,8 @@ import { DeckService } from './services/deck.service';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        TooltipModule.forRoot()
     ],
     providers: [
         DeckService
