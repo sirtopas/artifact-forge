@@ -1,0 +1,20 @@
+<div *ngIf="creepList">
+    <div class="row">
+        <div class="col-sm-12">
+            <div *ngFor="let card of creepList">
+                <div class="col-sm-3">
+                    <img class="img-responsive" [src]=card.large_image.default [tooltip]="temp">
+                </div>
+                <ng-template #temp>
+                    <div>{{card.card_name.english}}</div>
+                    <div>Artist: {{card.illustrator}}</div>
+                    <div>References:</div>
+                    <div *ngFor="let reference of card.references">
+                        {{getReferenceNames(reference.card_id).card_name.english}}
+                    </div>
+                    <div>{{card.rarity}}</div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

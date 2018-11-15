@@ -4,15 +4,23 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesComponent } from './heroes/heroes.component';
 import { DeckService } from './services/deck.service';
 
 import { TooltipModule } from 'ngx-bootstrap';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { SpellsComponent } from './spells/spells.component';
+import { CreepsComponent } from './creeps/creeps.component';
+import { AbilitiesComponent } from './abilities/abilities.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        DashboardComponent
+        DashboardComponent,
+        HeroesComponent,
+        SpellsComponent,
+        CreepsComponent,
+        AbilitiesComponent
     ],
     imports: [
         BrowserModule,

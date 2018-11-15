@@ -1,3 +1,25 @@
-<p>
-  dashboard works!
-</p>
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#heroes" aria-controls="heroes" role="tab" data-toggle="tab">Heroes</a></li>
+        <li role="presentation"><a href="#creeps" aria-controls="creeps" role="tab" data-toggle="tab">Creeps</a></li>
+        <li role="presentation"><a href="#spells" aria-controls="spells" role="tab" data-toggle="tab">Spells</a></li>
+        <li role="presentation"><a href="#abilities" aria-controls="abilities" role="tab" data-toggle="tab">Abilities</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="heroes">
+            <app-heroes [heroList]="heroList"></app-heroes>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="creeps">
+            <app-creeps [creepList]="creepList"></app-creeps>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="spells">
+            <app-spells [spellList]="spellList"></app-spells>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="abilities">
+            <app-abilities [abilityList]="abilityList"></app-abilities>
+        </div>
+    </div>
+
+</div>

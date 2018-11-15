@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { DeckService } from '../services/deck.service';
+import { BaseComponent } from '../shared/base.component';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent extends BaseComponent implements OnInit {
 
-  constructor() { }
+    constructor(protected deckService: DeckService) {
+        super(deckService);
+    }
 
-  ngOnInit() {
-  }
-
+    ngOnInit() {
+        this.getCards();
+    }
 }
