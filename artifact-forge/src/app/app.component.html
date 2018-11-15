@@ -1,49 +1,41 @@
-<!-- <div class="ui container"> -->
 <h1>Cards</h1>
-<div *ngIf="cardCollection">
-    <div class="ui column grid">
-        <div *ngFor="let card of heroList">
-            <ng-template #temp>
-                <div class="ui card">
-                    <div class="content">
-                        <a class="header">{{card.card_name.english}}</a>
-                        <div class="meta">
-                            <span class="date">Artist: {{card.illustrator}}</span>
-                        </div>
-                        <div class="description">
-                            References:
-                            <div *ngFor="let reference of card.references">
-                                {{getReferenceNames(reference.card_id).card_name.english}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        {{card.rarity}}
-                    </div>
-                </div>
-            </ng-template>
 
-            <div class="column">
-                <div class="ui card" [tooltip]="temp" containerClass="hover-info">
-                    <div class="image">
-                        <img class="ui small image" [src]=card.large_image.default>
-                    </div>
-                    <div class="content">
-                        <div class="header">{{card.card_name.english}}</div>
-                        <div class="meta">{{card.card_type}}</div>
-                        <div class="description" [innerHTML]="card.card_text.english"></div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            HP: {{card.hit_points}}
-                        </span>
-                        <span>
-                            A: {{card.attack}}
-                        </span>
-                    </div>
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">...</div>
+        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+    </div>
+
+</div>
+<div *ngIf="cardCollection">
+    <div class="row">
+        <div class="col-sm-12">
+            <div *ngFor="let card of heroList">
+                <div class="col-sm-3">
+                    <img class="img-responsive" [src]=card.large_image.default [tooltip]="temp">
                 </div>
+                <ng-template #temp>
+                    <div>{{card.card_name.english}}</div>
+                    <div>Artist: {{card.illustrator}}</div>
+                    <div>References:</div>
+                    <div *ngFor="let reference of card.references">
+                        {{getReferenceNames(reference.card_id).card_name.english}}
+                    </div>
+                    <div>{{card.rarity}}</div>
+                </ng-template>
             </div>
         </div>
     </div>
 </div>
-<!-- </div> -->

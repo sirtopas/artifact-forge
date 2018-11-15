@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { DeckService } from './services/deck.service';
 
 import { TooltipModule } from 'ngx-bootstrap';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        DashboardComponent
     ],
     imports: [
         BrowserModule,
