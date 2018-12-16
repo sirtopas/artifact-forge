@@ -4,5 +4,5 @@ Artifact Forge - An Angular app to view Artifact cards
 ## API
 The API 
 
-## Front-end
+## Front-end
 The front end
