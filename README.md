@@ -1,4 +1,4 @@
-# artifact-forge
+# Artifact Forge
 Artifact Forge - An Angular app to view Artifact cards
 
 ## API
