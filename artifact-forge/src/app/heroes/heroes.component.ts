@@ -19,4 +19,11 @@ export class HeroesComponent extends BaseComponent implements OnInit {
     ngOnInit() {
     }
 
+    getReferenceNames(referenceId: number) {
+        let referencedCard: Card;
+        for (const set of this.setList) {
+            referencedCard = this.cardCollection.card_set[this.setList.indexOf(set)].card_list.find(c => c.card_id === referenceId);
+        }
+        return referencedCard;
+    }
 }

@@ -7,13 +7,9 @@ import { BaseComponent } from '../shared/base.component';
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent extends BaseComponent implements OnInit {
+export class DashboardComponent extends BaseComponent {
 
     constructor(protected deckService: DeckService) {
         super(deckService);
-    }
-
-    ngOnInit() {
-        this.getCards();
     }
 }

@@ -14,9 +14,7 @@ export abstract class BaseComponent {
     public creepList: Card[];
     public abilityList: Card[];
 
-    constructor(protected deckService: DeckService) { }
-
-    getCards() {
+    constructor(protected deckService: DeckService) {
         this.cardCollection = new CardCollection();
         this.cardCollection.card_set = [];
         for (const set of this.setList) {
@@ -34,13 +32,5 @@ export abstract class BaseComponent {
                 });
             });
         }
-    }
-
-    getReferenceNames(referenceId: number) {
-        let referencedCard: Card;
-        for (const set of this.setList) {
-            referencedCard = this.cardCollection.card_set[this.setList.indexOf(set)].card_list.find(c => c.card_id === referenceId);
-        }
-        return referencedCard;
     }
 }
